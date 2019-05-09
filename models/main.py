@@ -213,6 +213,11 @@ def main(_):
         height = 32
         width = 32
         channels = 1
+    elif cfg.dataset == 'cifar10':
+        height = 32
+        width = 32
+        channels = 3
+        num_label = 10
 
     # Initializing model and data loader
     net = model(height=height, width=width, channels=channels, num_label=num_label)
