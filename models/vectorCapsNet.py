@@ -21,7 +21,7 @@ import numpy as np
 import capslayer as cl
 import tensorflow as tf
 
-from config import cfg
+from models.config import cfg
 
 
 class CapsNet(object):
@@ -64,7 +64,7 @@ class CapsNet(object):
 
         with tf.variable_scope('PrimaryCaps_layer'):
             primaryCaps, activation = cl.layers.primaryCaps(conv1,
-                                                            filters=32,
+                                                            filters=64,  # MNIST 32
                                                             kernel_size=9,
                                                             strides=2,
                                                             out_caps_dims=[8, 1],
